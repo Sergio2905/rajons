@@ -28,12 +28,14 @@
                         </div>
                     </div>
                     <div class="reg__content">
+                        <h1 class="reg__title">Восстановить пароль</h1>
                         <form action="#" class="reg__form form-reg">
-                            <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="Пароль">
-                            <button type="submit">Войти</button>
-                            <a href="#" class="form-reg__link">Забыли пароль?</a>
-                            <a href="#" class="form-reg__link">Зарегистрироваться</a>
+                            <input type="text" placeholder="Введите адрес э-почты">
+                            <div class="form-reg__capcha">
+                                <picture><source srcset="img/capcha.webp" type="image/webp"><img src="img/capcha.jpg" alt="Capcha"></picture>
+                            </div>
+                            <input type="text" placeholder="Введите код на картинке">
+                            <button type="submit">Получить пароль</button>
                         </form>
                         <div class="reg__info">
                             <p>У многих из нас есть внутренний бандит, но воспитание и чувство ответственности
