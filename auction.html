@@ -238,12 +238,44 @@
     </div>
 </section>
 
-            <section class="vip">
-                <div class="vip__container container">
-                    <div class="vip__body">
-                        <div class="vip__wrapper">
-                            <div class="vip__cards">
-                                <div class="vip__card card-vip">
+            <section class="auction">
+                <div class="auction container container">
+                    <div class="auction__body">
+                        <div class="auction__details">
+                            <div class="auction__info">
+                                В случае неудачи <span>Доллары</span>, <span>Самоцветы</span> и <span>Самоцветы
+                                    клана</span> вернутся после окончания аукциона
+                            </div>
+                            <ul class="auction__list">
+                                <li class="auction__item">
+                                    <picture><source srcset="img/cards/bank.webp" type="image/webp"><img src="img/cards/bank.png" alt="Money"></picture>
+                                    Ваши вложенные доллары:<span>0</span>
+                                </li>
+                                <li class="auction__item">
+                                    <picture><source srcset="img/main/gems.webp" type="image/webp"><img src="img/main/gems.png" alt="Gems"></picture>
+                                    Ваши вложенные самоцветы:<span>0</span>
+                                </li>
+                                <li class="auction__item">
+                                    <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                    Вложенные вами клановые самоцветы:<span>0</span>
+                                </li>
+                                <li class="auction__item">
+                                    <picture><source srcset="img/studio/bdiamond.webp" type="image/webp"><img src="img/studio/bdiamond.png" alt="Diamond"></picture>
+                                    Вложенные вами черные самоцветы:<span>0</span>
+                                </li>
+                                <li class="auction__item">
+                                    <picture><source srcset="img/main/diamonds.webp" type="image/webp"><img src="img/main/diamonds.png" alt="Diamond"></picture>
+                                    Вложенные вами бриллианты:<span>0</span>
+                                </li>
+                                <li class="auction__item">
+                                    <picture><source srcset="img/main/bruto.webp" type="image/webp"><img src="img/main/bruto.png" alt="Bruto"></picture>
+                                    Вложенные вами брутальности:<span>0</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="auction__wrapper">
+                            <div class="auction__cards">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -272,23 +304,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -317,23 +366,44 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__rate">
+                                            <div class="card-vip__name">Ваш тариф:</div>
+                                            <div class="card-vip__rate-value">80000080100</div>
+                                        </div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -362,23 +432,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -407,23 +494,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -452,23 +556,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -497,23 +618,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -542,23 +680,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -587,23 +742,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -632,23 +804,40 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
-                                <div class="vip__card card-vip">
+                                <div class="auction__card card-vip">
                                     <div class="card-vip__body">
                                         <div class="card-vip__image">
                                             <div class="card-vip__action">Действие</div>
@@ -677,20 +866,37 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div class="card-vip__usage">Использование: <span>1</span></div>
-                                        <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
-                                            клан
-                                            и
-                                            получает боевой доход для всех участников за 5 боёв, а также отчисление
-                                            победных
-                                            очков от этого клана за 5 боёв.</div>
-                                        <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
-                                        <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
-                                        <div class="card-vip__value">
-                                            <picture><source srcset="img/vip/clan.webp" type="image/webp"><img src="img/vip/clan.png" alt="Clan"></picture>
-                                            <span>300000000000000000</span>
+                                        <div class="card-vip__wrapper">
+                                            <div class="card-vip__usage">Использование: <span>1</span></div>
+                                            <div class="card-vip__info">Clan Sniper - активирует карту на нежелательный
+                                                клан
+                                                и
+                                                получает боевой доход для всех участников за 5 боёв, а также отчисление
+                                                победных
+                                                очков от этого клана за 5 боёв.</div>
+                                            <div class="card-vip__begin">Начало: <span>12.01.2023 16:42</span></div>
+                                            <div class="card-vip__end">Конец: <span>12.03.2023 13:48</span></div>
                                         </div>
-                                        <button type="button" class="card-vip__btn">Купить</button>
+                                        <div class="card-vip__lider">Лидер: <span>АЛКИС</span></div>
+                                        <div class="card-vip__course">
+                                            <div class="card-vip__name">Текущий курс:</div>
+                                            <div class="card-vip__course-value">
+                                                <picture><source srcset="img/main/clan-g.webp" type="image/webp"><img src="img/main/clan-g.png" alt="Clan"></picture>
+                                                80000080100
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__range range">
+                                            <input type="range" value="0" min="0" max="80000080100">
+                                            <div class="range__value">
+                                                <div class="range__max">80000080100</div>
+                                                +
+                                                <div class="range__current">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-vip__value">80000080100</div>
+                                        <button type="button" class="card-vip__btn disable">Сделать ставку</button>
+                                        <button type="button" class="card-vip__btn">Выровнять +100</button>
+                                        <button type="button" class="card-vip__btn">Двойной</button>
                                     </div>
                                 </div>
                             </div>
