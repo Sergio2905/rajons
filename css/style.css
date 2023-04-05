@@ -244,6 +244,29 @@ body._lock {
   border: 1px solid #BF0000;
 }
 
+.btn_yellow {
+  background: #FFD700;
+  border: 2px solid #BF0000;
+}
+
+.bar {
+  background: #fff;
+  position: relative;
+}
+
+.bar__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: #999;
+}
+
+.bar__value {
+  font-size: 0;
+}
+
 .pagination {
   display: flex;
   align-items: center;
@@ -1481,9 +1504,9 @@ body._lock {
 
 .cards__items {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 170px);
+  justify-content: center;
 }
 
 .cards__item {
@@ -1548,26 +1571,25 @@ body._lock {
   display: none;
 }
 
+.card.active .card__list_tournament {
+  display: flex;
+}
+
 .card.active .card__list.options {
   display: block;
 }
 
 .card.active .card__image {
-  border: 6px solid #FFD700;
-  border-radius: 5px;
   width: 100%;
   height: 147px;
-}
-
-.card.active .card__skills {
-  top: 4px;
-  padding: 0 4px;
 }
 
 .card__image {
   width: 150px;
   height: 150px;
   position: relative;
+  border: 6px solid #FFD700;
+  border-radius: 5px;
 }
 
 .card__image img {
@@ -1586,9 +1608,9 @@ body._lock {
   justify-content: space-between;
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 4px;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 4px;
   z-index: 1;
 }
 
@@ -1624,6 +1646,10 @@ body._lock {
 .card__list {
   margin-bottom: 5px;
   padding: 10px 10px 0;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card__list.options {
@@ -1668,6 +1694,24 @@ body._lock {
   width: 13px;
   height: 13px;
   margin-right: 6px;
+}
+
+.card__item_tournament {
+  color: #BF0000;
+  font-weight: 700;
+  margin-left: 7px;
+}
+
+.card__item_tournament:not(:last-child) {
+  margin-bottom: 1px;
+}
+
+.card__item_tournament img {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__item_red {
@@ -1962,18 +2006,10 @@ body._lock {
   background: #555;
 }
 
-.vip__wrapper {
-  max-width: 850px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
 .vip__cards {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 170px);
+  justify-content: center;
 }
 
 .card-vip {
@@ -2080,7 +2116,7 @@ body._lock {
   color: #BF0000;
 }
 
-.card-vip__value {
+.card-vip__price {
   font-weight: 700;
   font-size: 0.5rem;
   color: #fff;
@@ -2090,7 +2126,7 @@ body._lock {
   padding: 0 10px;
 }
 
-.card-vip__value img {
+.card-vip__price img {
   width: 20px;
   height: 20px;
   margin-right: 5px;
@@ -2449,7 +2485,7 @@ body._lock {
 
 .studio__body {
   background: #555;
-  padding: 20px 20px 60px;
+  padding: 20px 0 60px;
 }
 
 .studio__btn {
@@ -2468,7 +2504,6 @@ body._lock {
 }
 
 .studio__table {
-  max-width: 830px;
   margin: 0 auto;
   overflow-x: auto;
   scrollbar-width: thin;
@@ -2486,10 +2521,16 @@ body._lock {
 
 .card-studio {
   min-width: 830px;
+  padding: 20px 0;
+}
+
+.card-studio__row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  max-width: 830px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .card-studio:not(:last-child) {
@@ -3035,22 +3076,225 @@ body._lock {
   margin-right: 7px;
 }
 
-.auction__wrapper {
-  max-width: 850px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
 .auction__cards {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 170px);
+  justify-content: center;
 }
 
 .auction__card .card-vip__body {
   background: #fff;
+}
+
+.missions__body {
+  background: #555;
+  margin-bottom: 86px;
+  padding: 20px 0 50px;
+}
+
+.missions__info {
+  font-size: 0.625rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #111;
+  padding: 0 5px 20px;
+}
+
+.missions__image {
+  max-width: 150px;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 27px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.missions__image picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.missions__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.missions__desc {
+  max-width: 625px;
+}
+
+.missions__desc p:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.missions__desc span {
+  font-weight: 700;
+}
+
+.missions__block {
+  color: #fff;
+  font-size: 0.625rem;
+  padding: 20px 0;
+}
+
+.missions__block:not(:last-of-type) {
+  border-bottom: 2px solid #111;
+}
+
+.missions__block:not(:first-of-type) {
+  border-top: 2px solid #999;
+}
+
+.missions__table {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 black;
+}
+
+.missions__table::-webkit-scrollbar {
+  width: 100%;
+  height: 1px;
+}
+
+.missions__table::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.missions__day {
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.missions__rating {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.missions__rating_fill {
+  justify-content: center;
+  margin: 10px 0 30px;
+}
+
+.missions__rating_fill svg {
+  stroke: none;
+  fill: #FFD700;
+}
+
+.missions__rating svg {
+  width: 15px;
+  height: 15px;
+  stroke: #FFD700;
+}
+
+.missions__rating svg:not(:last-child) {
+  margin-right: 5px;
+}
+
+.missions__row {
+  padding: 0 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.missions__row:first-child .missions__item {
+  padding: 0 0 10px;
+  font-weight: 700;
+}
+
+.missions__row:first-child .missions__performance {
+  color: #999999;
+  text-align: center;
+}
+
+.missions__row:first-child .missions__header {
+  color: #999999;
+}
+
+.missions__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 670px;
+  margin: 0 auto;
+  padding: 10px 0;
+  min-width: 530px;
+}
+
+.missions__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.missions__img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.missions__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.missions__name {
+  font-weight: 700;
+}
+
+.missions__performance {
+  width: 190px;
+}
+
+.missions__value {
+  margin-bottom: 10px;
+}
+
+.missions__bar {
+  width: 190px;
+  height: 14px;
+}
+
+.missions__btns {
+  max-width: 455px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.missions__btn {
+  width: 133px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.missions__btn_item {
+  margin-right: 13px;
+}
+
+.missions__btn img {
+  width: 13px;
+  height: 13px;
+  margin-right: 4px;
 }
 
 .clan {
@@ -3059,7 +3303,7 @@ body._lock {
 
 .clan__body {
   background: #555;
-  padding: 20px 5px 60px;
+  padding: 20px 0 60px;
 }
 
 .clan__body_chat {
@@ -3181,6 +3425,10 @@ body._lock {
 .clan__shop {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.clan__studio {
+  margin-bottom: 0;
 }
 
 .menu-clan {
@@ -4080,6 +4328,8 @@ body._lock {
   justify-content: center;
   margin-bottom: 20px;
   margin-right: 20px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .bosses__image {
@@ -4227,6 +4477,673 @@ body._lock {
 
 .bosses__price span {
   font-weight: 700;
+}
+
+.slots {
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.slots__block:not(:last-of-type) {
+  border-bottom: 2px solid #111;
+}
+
+.slots__block:not(:first-of-type) {
+  border-top: 2px solid #999;
+}
+
+.slots__info {
+  max-width: 365px;
+  margin: 0 auto 40px;
+  padding: 0 10px;
+}
+
+.slots__info span {
+  font-weight: 700;
+}
+
+.slots__price {
+  max-width: 235px;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FFFFFF;
+  padding: 10px 13px;
+}
+
+.slots__price img {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.slots__price span {
+  font-weight: 700;
+}
+
+.slots__checkbox {
+  max-width: 235px;
+  margin: 0 auto 20px;
+  padding-left: 20px;
+  font-size: 0.625rem;
+  height: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.slots__checkbox.active::before {
+  background: none;
+}
+
+.slots__checkbox.active::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.slots__checkbox::before {
+  width: 13px;
+  height: 13px;
+}
+
+.slots__checkbox::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 11px;
+  height: 11px;
+  -webkit-mask: url("../img/icons/icons.svg#check") center no-repeat;
+          mask: url("../img/icons/icons.svg#check") center no-repeat;
+  background: #39BE2D;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+
+.slots__btn {
+  width: 235px;
+  height: 39px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #111111;
+  margin: 0 auto 30px;
+  display: block;
+}
+
+.slots__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 253px);
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.slots__item {
+  padding: 10px;
+}
+
+.slots__card {
+  color: #fff;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+}
+
+.slots__image {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 9px;
+}
+
+.slots__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slots__reward {
+  display: flex;
+  align-items: center;
+}
+
+.slots__reward span {
+  font-weight: 700;
+}
+
+.slots__reward img {
+  width: 20px;
+  height: 20px;
+  margin: 0 9px;
+}
+
+.base__body {
+  padding: 20px 0;
+  margin-bottom: 86px;
+  background: #555;
+}
+
+.work-base {
+  color: #fff;
+  font-size: 0.625rem;
+  padding-bottom: 40px;
+}
+
+.work-base__wrapper {
+  overflow-x: auto;
+}
+
+.work-base__row {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.work-base__row:not(:last-child) {
+  border-bottom: 2px solid #111;
+}
+
+.work-base__row:not(:first-child) {
+  border-top: 2px solid #999;
+}
+
+.work-base__row:nth-child(2) {
+  border-top: none;
+}
+
+.work-base__row:first-child {
+  border: none;
+}
+
+.work-base__row:first-child .work-base__items {
+  padding: 0 10px;
+}
+
+.work-base__row:first-child .work-base__reward {
+  margin-right: 118px;
+  text-align: center;
+  color: #999;
+  font-weight: 700;
+}
+
+.work-base__row:first-child .work-base__work {
+  color: #999;
+  font-weight: 700;
+}
+
+.work-base__row:first-child .work-base__work span {
+  display: block;
+  width: 350px;
+  text-align: center;
+}
+
+.work-base__items {
+  padding: 20px 10px;
+  display: flex;
+  align-items: flex-start;
+  min-width: 640px;
+  max-width: 835px;
+  margin: 0 auto;
+}
+
+.work-base__work {
+  flex: 1 1 auto;
+}
+
+.work-base__images {
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+}
+
+.work-base__image {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  border-radius: 5px;
+  border: 6px solid #FFD700;
+  margin-bottom: 20px;
+}
+
+.work-base__image:not(:last-child) {
+  margin-right: 10px;
+}
+
+.work-base__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.work-base__level {
+  background: #FFFFFF;
+  border-radius: 5px;
+  color: #BF0000;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 52px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-base__desc {
+  font-weight: 700;
+  border: 1px solid #FFFFFF;
+  padding: 8px;
+  text-align: center;
+  max-width: 350px;
+}
+
+.work-base__reward {
+  width: 110px;
+  margin-right: 20px;
+}
+
+.work-base__or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+}
+
+.work-base__or img {
+  width: 20px;
+  height: 20px;
+  margin: 0 7px;
+}
+
+.work-base__or span {
+  font-weight: 700;
+}
+
+.work-base__start {
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.work-base__btn {
+  width: 98px;
+  height: 28px;
+}
+
+.tournament {
+  margin-bottom: 86px;
+}
+
+.tournament__body {
+  background: #555;
+}
+
+.tournament__cards {
+  border-top: 2px solid #999;
+  padding-bottom: 50px;
+}
+
+.menu-tournament {
+  border-bottom: 2px solid #111;
+  padding: 0 10px;
+}
+
+.menu-tournament__body {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.menu-tournament__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-tournament__item {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.menu-tournament__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.menu-tournament__item.active .menu-tournament__link {
+  font-weight: 700;
+}
+
+.menu-tournament__link {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.list-tournament__item {
+  display: flex;
+  align-items: center;
+}
+
+.list-tournament__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.list-tournament__place {
+  width: 55px;
+}
+
+.list-tournament__bruto {
+  width: 130px;
+  display: flex;
+  align-items: center;
+}
+
+.list-tournament__bruto img {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.list-tournament__srones {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.list-tournament__srones img {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.info-tournament {
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #111;
+  color: #fff;
+  font-size: 0.625rem;
+}
+
+.info-tournament__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 735px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.info-tournament__desc {
+  max-width: 295px;
+}
+
+.info-tournament__desc span {
+  font-weight: 700;
+}
+
+.info-tournament__name {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.table-tournament {
+  color: #fff;
+  font-size: 0.625rem;
+  border-top: 2px solid #999;
+  padding: 20px 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 black;
+}
+
+.table-tournament::-webkit-scrollbar {
+  width: 100%;
+  height: 1px;
+}
+
+.table-tournament::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.table-tournament__row {
+  padding: 0 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.table-tournament__row:not(:last-child) {
+  border-bottom: 2px solid #111;
+}
+
+.table-tournament__row:not(:first-child) {
+  border-top: 2px solid #999;
+}
+
+.table-tournament__row:nth-child(2) {
+  border-top: none;
+}
+
+.table-tournament__row:first-child {
+  border: none;
+}
+
+.table-tournament__row:first-child .table-tournament__item {
+  padding: 0 20px;
+}
+
+.table-tournament__row:first-child .table-tournament__level,
+.table-tournament__row:first-child .table-tournament__points,
+.table-tournament__row:first-child .table-tournament__olymp-points {
+  color: #999;
+  font-weight: 700;
+}
+
+.table-tournament__item {
+  max-width: 790px;
+  padding: 20px 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 480px;
+}
+
+.table-tournament__item.active {
+  border: 1px solid #FFFFFF;
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+
+.table-tournament__clan {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+.table-tournament__header {
+  width: 186px;
+  text-align: center;
+  color: #999;
+  font-weight: 700;
+}
+
+.table-tournament__level {
+  width: 85px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.table-tournament__points {
+  width: 100px;
+  text-align: center;
+}
+
+.table-tournament__olymp-points {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-tournament__olymp-points img {
+  width: 13px;
+  height: 13px;
+  margin-right: 3px;
+}
+
+.table-tournament__number {
+  width: 15px;
+}
+
+.table-tournament__image {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #39BE2D;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.table-tournament__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.table-tournament__name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.table-tournament__icons {
+  display: flex;
+}
+
+.table-tournament__icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-tournament__icon:not(:last-child) {
+  margin-right: 5px;
+}
+
+.olimpic-tournament__info {
+  font-size: 0.625rem;
+  color: #fff;
+  padding: 20px 10px;
+  border-bottom: 2px solid #111;
+  border-top: 2px solid #999;
+}
+
+.olimpic-tournament__info p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.olimpic-tournament__info p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.olimpic-tournament__info span {
+  font-weight: 700;
+}
+
+.olimpic-tournament__info span.red {
+  color: #BF0000;
+}
+
+.olimpic-tournament__prize {
+  font-size: 0.625rem;
+  color: #fff;
+  border-bottom: 2px solid #111;
+  border-top: 2px solid #999;
+}
+
+.olimpic-tournament__prize-wrapper {
+  max-width: 735px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-olimpic {
+  width: 300px;
+}
+
+.list-olimpic__item {
+  display: flex;
+  align-items: center;
+}
+
+.list-olimpic__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.list-olimpic__item img {
+  width: 13px;
+  height: 13px;
+  margin: 0 3px;
+}
+
+.list-olimpic__item span {
+  font-weight: 700;
+}
+
+.money-olimpic__item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.money-olimpic__item-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.money-olimpic__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.money-olimpic__value {
+  font-size: 0.625rem;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.money-olimpic__value:nth-child(2) {
+  margin: 0 5px;
+}
+
+.money-olimpic__value img {
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+}
+
+.money-olimpic__btn {
+  width: 98px;
+  height: 28px;
+  margin-left: 20px;
 }
 
 .footer__bg {
@@ -4378,6 +5295,7 @@ body._lock {
 
   .cards__items {
     margin: 0 calc(-2.5px + -7.5 * (100vw - 320px) / 680);
+    grid-template-columns: repeat(auto-fill, calc(155px + 15 * (100vw - 320px) / 680));
   }
 
   .cards__item {
@@ -4390,10 +5308,11 @@ body._lock {
 
   .vip__cards {
     margin: 0 calc(-2.5px + -7.5 * (100vw - 320px) / 680);
+    grid-template-columns: repeat(auto-fill, calc(155px + 15 * (100vw - 320px) / 680));
   }
 
   .card-vip {
-    padding: calc(2.5px + 7.5 * (100vw - 320px) / 680);
+    padding: 10px calc(2.5px + 7.5 * (100vw - 320px) / 680);
   }
 
   .auction__body {
@@ -4410,6 +5329,7 @@ body._lock {
 
   .auction__cards {
     margin: 0 calc(-2.5px + -7.5 * (100vw - 320px) / 680);
+    grid-template-columns: repeat(auto-fill, calc(155px + 15 * (100vw - 320px) / 680));
   }
 
   .menu-clan__item:not(:last-child) {
@@ -4623,6 +5543,33 @@ body._lock {
     margin-bottom: 15px;
     text-align: center;
   }
+
+  .list-tournament {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-tournament__wrapper {
+    flex-direction: column;
+  }
+
+  .info-tournament__desc {
+    max-width: unset;
+  }
+
+  .olimpic-tournament__prize-wrapper {
+    flex-direction: column;
+  }
+
+  .list-olimpic {
+    margin: 0 auto 20px;
+  }
+
+  .money-olimpic {
+    max-width: 380px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -4680,6 +5627,15 @@ body._lock {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .missions__info {
+    flex-direction: column;
+  }
+
+  .missions__image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
   .money-clan__info {
     flex-direction: column;
   }
@@ -4693,6 +5649,23 @@ body._lock {
   .money-clan__pay {
     flex-direction: column;
     align-items: center;
+  }
+
+  .list-tournament__item {
+    flex-wrap: wrap;
+  }
+
+  .money-olimpic__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .money-olimpic__item-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .money-olimpic__btn {
+    margin-left: 0;
   }
 
   .footer__list {

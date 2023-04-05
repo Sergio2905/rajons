@@ -220,15 +220,19 @@
     </div>
 </section>
 
-            <section class="submenu submenu_left">
+            <section class="submenu">
     <div class="submenu__container container">
         <div class="submenu__body">
             <ul class="submenu__list">
-                <li class="submenu__item"><a href="#" class="submenu__link">клан</a></li>
-                <li class="submenu__item active"><a href="#" class="submenu__link">работа</a></li>
-                <li class="submenu__item"><a href="#" class="submenu__link">турнир</a></li>
-                <li class="submenu__item"><a href="#" class="submenu__link">герой</a></li>
-                <li class="submenu__item"><a href="#" class="submenu__link">казино</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">карты</a></li>
+                <li class="submenu__item active"><a href="#" class="submenu__link">магазин</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">vip магазин</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">базар</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">аукцион</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">аренда</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">экипировка</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">персональный магазин</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">мастерская</a></li>
             </ul>
         </div>
     </div>
@@ -335,22 +339,151 @@
     </nav>
 </div>
 
-                        <div class="clan__info">
-                            <h2 class="clan__title">Информация "RAJONS"</h2>
-                            <div class="clan__name">Название клана - <span>RAJONS</span></div>
-                            <div class="clan__desc">Вы состоите в этом клане. Информацию о клане может менять только его
-                                главарь.</div>
-                            <div class="clan__footer">
-                                <div class="clan__image">
-                                    <picture><source srcset="img/clan/info.webp" type="image/webp"><img src="img/clan/info.jpg" alt="Image"></picture>
+                        <div class="clan__studio studio">
+                            <div class="studio__body">
+                                <button type="button" class="studio__btn">Создать мастерскую</button>
+                                <div class="studio__table">
+                                    <div class="studio__card card-studio">
+                                        <div class="card-studio__row">
+                                            <div class="card-studio__image">Карта</div>
+                                            <div class="card-studio__owner owner">Владелец</div>
+                                            <div class="card-studio__creation">Создание</div>
+                                            <div class="card-studio__reward">Вознаграждение</div>
+                                            <div class="card-studio__time">Будет работать, пока</div>
+                                            <div class="card-studio__button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="studio__card card-studio">
+                                        <div class="card-studio__row">
+                                            <div class="card-studio__image">
+                                                <picture><source srcset="img/studio/key.webp" type="image/webp"><img src="img/studio/key.jpg" alt="Card"></picture>
+                                            </div>
+                                            <div class="card-studio__owner owner">
+                                                <div class="owner__header">
+                                                    <div class="owner__name">GrandMaster</div>
+                                                    <div class="owner__icons">
+                                                        <div class="owner__icon">
+                                                            <picture><source srcset="img/studio/icon1.webp" type="image/webp"><img src="img/studio/icon1.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <div class="owner__icon">
+                                                            <picture><source srcset="img/studio/icon2.webp" type="image/webp"><img src="img/studio/icon2.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <div class="owner__icon">
+                                                            <picture><source srcset="img/studio/icon3.webp" type="image/webp"><img src="img/studio/icon3.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <div class="owner__icon">
+                                                            <picture><source srcset="img/studio/icon4.webp" type="image/webp"><img src="img/studio/icon4.png" alt="Icon"></picture>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owner__bar">
+                                                    <div class="owner__bar_value">100</div>
+                                                </div>
+                                                <div class="owner__progress">100,009 / 100,000</div>
+                                            </div>
+                                            <div class="card-studio__creation">
+                                                <p><span>25</span> дней</p>
+                                                <p><span>5/5</span> рабочих</p>
+                                                <p><span>100 000</span> боёв</p>
+                                            </div>
+                                            <div class="card-studio__reward">1x<img src="img/studio/key_icon.png"
+                                                    alt="Key"></div>
+                                            <div class="card-studio__time">03.02.2023 22:00</div>
+                                            <div class="card-studio__button">
+                                                <button type="button" class="card-studio__btn disabled">
+                                                    Подать заявку 1 300 000 000
+                                                    <picture><source srcset="img/studio/diamond_grey.webp" type="image/webp"><img src="img/studio/diamond_grey.png" alt="Diamond"></picture>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="studio__card card-studio">
+                                        <div class="card-studio__row">
+                                            <div class="card-studio__image">
+                                                <div class="card-studio__skills">
+                                                    <div class="card-studio__level">25000 LVL</div>
+                                                    <div class="card-studio__hp">5000 HP</div>
+                                                </div>
+                                                <picture><source srcset="img/cards/card.webp" type="image/webp"><img src="img/cards/card.jpg" alt="Card"></picture>
+                                            </div>
+                                            <div class="card-studio__owner owner">
+                                                <div class="owner__header">
+                                                    <div class="owner__name">С_Т_0_П__С_Т_О_П</div>
+                                                    <div class="owner__icons">
+                                                        <div class="owner__icon">
+                                                            <picture><source srcset="img/studio/icon5.webp" type="image/webp"><img src="img/studio/icon5.png" alt="Icon"></picture>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owner__bar">
+                                                    <div class="owner__bar_value">70</div>
+                                                </div>
+                                                <div class="owner__progress">100,009 / 100,000</div>
+                                            </div>
+                                            <div class="card-studio__creation">
+                                                <p><span>25</span> дней</p>
+                                                <p><span>5/5</span> рабочих</p>
+                                                <p><span>100 000</span> боёв</p>
+                                            </div>
+                                            <div class="card-studio__reward">3000<img src="img/studio/bdiamond.png"
+                                                    alt="Diamond">
+                                            </div>
+                                            <div class="card-studio__time">03.02.2023 22:00</div>
+                                            <div class="card-studio__button">
+                                                <button type="button" class="card-studio__btn">
+                                                    Подать заявку 1 300 000 000
+                                                    <picture><source srcset="img/shop/diamond.webp" type="image/webp"><img src="img/shop/diamond.png" alt="Diamond"></picture>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="studio__card card-studio">
+                                        <div class="card-studio__row">
+                                            <div class="card-studio__image">
+                                                <div class="card-studio__skills">
+                                                    <div class="card-studio__level">25000 LVL</div>
+                                                    <div class="card-studio__hp">5000 HP</div>
+                                                </div>
+                                                <picture><source srcset="img/cards/card.webp" type="image/webp"><img src="img/cards/card.jpg" alt="Card"></picture>
+                                            </div>
+                                            <div class="card-studio__owner owner">
+                                                <div class="owner__header">
+                                                    <div class="owner__name">С_Т_0_П__С_Т_О_П</div>
+                                                    <div class="owner__icons">
+                                                        <div class="owner__icon">
+                                                            <picture><source srcset="img/studio/icon5.webp" type="image/webp"><img src="img/studio/icon5.png" alt="Icon"></picture>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owner__bar">
+                                                    <div class="owner__bar_value">70</div>
+                                                </div>
+                                                <div class="owner__progress">100,009 / 100,000</div>
+                                            </div>
+                                            <div class="card-studio__creation">
+                                                <p><span>25</span> дней</p>
+                                                <p><span>5/5</span> рабочих</p>
+                                                <p><span>100 000</span> боёв</p>
+                                            </div>
+                                            <div class="card-studio__reward">3000<img src="img/studio/bdiamond.png"
+                                                    alt="Diamond">
+                                            </div>
+                                            <div class="card-studio__time">03.02.2023 22:00</div>
+                                            <div class="card-studio__button">
+                                                <button type="button" class="card-studio__btn">
+                                                    Подать заявку 1 300 000 000
+                                                    <picture><source srcset="img/shop/diamond.webp" type="image/webp"><img src="img/shop/diamond.png" alt="Diamond"></picture>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button type="button" class="clan__btn">Выйти из клана</button>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
-
         </div>
 
         <footer class="footer">
