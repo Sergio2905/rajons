@@ -249,6 +249,11 @@ body._lock {
   border: 2px solid #BF0000;
 }
 
+.btn.disabled {
+  color: #999;
+  border: 1px solid #999999;
+}
+
 .bar {
   background: #fff;
   position: relative;
@@ -1696,6 +1701,24 @@ body._lock {
   margin-right: 6px;
 }
 
+.card__item_hero {
+  color: #BF0000;
+  font-weight: 700;
+  margin-left: 7px;
+}
+
+.card__item_hero:not(:last-child) {
+  margin-bottom: 1px;
+}
+
+.card__item_hero img {
+  width: 13px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card__item_tournament {
   color: #BF0000;
   font-weight: 700;
@@ -1782,6 +1805,88 @@ body._lock {
   align-items: center;
   justify-content: center;
   margin-left: 6px;
+}
+
+.cards-mini__body {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 130px);
+  justify-content: center;
+}
+
+.cards-mini__item {
+  padding: 10px;
+}
+
+.cards-mini__card {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.cards-mini__image {
+  width: 100%;
+  height: 100%;
+  border: 6px solid #FFD700;
+  border-radius: 5px;
+  position: relative;
+}
+
+.cards-mini__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cards-mini__skills {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards-mini__level {
+  font-size: 0.375rem;
+  color: #BF0000;
+  padding: 2px 3px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.cards-mini__hp {
+  font-size: 0.375rem;
+  color: #BF0000;
+  padding: 2px 3px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.cards-mini__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.cards-mini__rating svg {
+  width: 9px;
+  height: 9px;
+  fill: #FFD700;
+}
+
+.cards-mini__rating svg:not(:last-child) {
+  margin-right: 2px;
 }
 
 .reg__body {
@@ -2279,8 +2384,6 @@ body._lock {
 
 .rent__table {
   padding-bottom: 20px;
-  max-width: 850px;
-  margin: 0 auto;
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #555 black;
@@ -2295,34 +2398,32 @@ body._lock {
   background: #555;
 }
 
-.card-rent {
-  min-width: 750px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 10px;
+.rent__row {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
-.card-rent:not(:last-child) {
+.rent__row:not(:last-child) {
   border-bottom: 2px solid #111;
 }
 
-.card-rent:not(:first-child) {
+.rent__row:not(:first-child) {
   border-top: 2px solid #999;
 }
 
-.card-rent:first-child {
+.rent__row:first-child {
   border: none;
+}
+
+.rent__row:first-child .card-rent {
   padding-bottom: 0;
 }
 
-.card-rent:first-child .card-rent__image,
-.card-rent:first-child .card-rent__info,
-.card-rent:first-child .card-rent__seller,
-.card-rent:first-child .card-rent__published,
-.card-rent:first-child .card-rent__period,
-.card-rent:first-child .card-rent__price {
+.rent__row:first-child .card-rent__image,
+.rent__row:first-child .card-rent__seller,
+.rent__row:first-child .card-rent__published,
+.rent__row:first-child .card-rent__period,
+.rent__row:first-child .card-rent__price {
   font-size: 0.625rem;
   color: #999999;
   display: flex;
@@ -2330,14 +2431,32 @@ body._lock {
   text-align: center;
 }
 
-.card-rent:first-child .card-rent__image {
+.rent__row:first-child .card-rent__info {
+  font-size: 0.625rem;
+  color: #999999;
+  display: flex;
+  padding-left: 20px;
+}
+
+.rent__row:first-child .card-rent__image {
   height: unset;
   border: none;
   border-radius: unset;
 }
 
-.card-rent:nth-child(2) {
+.rent__row:nth-child(2) {
   border-top: none;
+}
+
+.card-rent {
+  max-width: 850px;
+  margin: 0 auto;
+  min-width: 750px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
 }
 
 .card-rent__image {
@@ -2393,6 +2512,7 @@ body._lock {
   flex-direction: column;
   margin-right: 10px;
   width: 130px;
+  flex: 1 1 auto;
 }
 
 .card-rent__item {
@@ -2426,7 +2546,7 @@ body._lock {
   font-size: 0.625rem;
   color: #BF0000;
   margin-right: 10px;
-  width: 90px;
+  width: 110px;
   text-align: center;
 }
 
@@ -2434,7 +2554,7 @@ body._lock {
   font-size: 0.625rem;
   color: #fff;
   margin-right: 10px;
-  width: 100px;
+  width: 110px;
   text-align: center;
 }
 
@@ -2442,7 +2562,7 @@ body._lock {
   font-size: 0.625rem;
   color: #fff;
   margin-right: 10px;
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 
@@ -2453,7 +2573,7 @@ body._lock {
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  width: 80px;
+  width: 100px;
 }
 
 .card-rent__price img {
@@ -3242,6 +3362,7 @@ body._lock {
   margin-right: 15px;
   position: relative;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .missions__img img {
@@ -3295,6 +3416,676 @@ body._lock {
   width: 13px;
   height: 13px;
   margin-right: 4px;
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.hero__title span {
+  font-size: 0.75rem;
+  margin-right: 13px;
+}
+
+.hero__title img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.hero__cards {
+  border-top: 2px solid #999;
+}
+
+.hero__cards_shop {
+  border-top: none;
+}
+
+.hero__cards-mini {
+  border-top: 2px solid #999;
+  padding: 10px 0;
+}
+
+.hero__btn {
+  width: 113px;
+  height: 28px;
+  display: block;
+  margin: 0 auto 50px;
+}
+
+.hero__last-fights .level-hero {
+  border-bottom: 2px solid #111;
+}
+
+.hero__last-fights .level-hero__wrapper {
+  margin-bottom: 10px;
+}
+
+.hero__last-fights .title {
+  padding: 20px 0;
+  border-top: 2px solid #999;
+}
+
+.hero__last-fights .result-hero__win {
+  color: #fff;
+  font-weight: 400;
+}
+
+.hero__last-fights .result-hero__row:nth-child(2n+3) {
+  border-bottom: 2px solid #111;
+  padding-bottom: 20px;
+}
+
+.hero__last-fights .result-hero__row:nth-child(2n+4) {
+  border-top: 2px solid #999;
+  padding-top: 20px;
+}
+
+.hero__last-fights .result-hero {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hero__last-fights .table-hero {
+  padding-top: 20px;
+  border-top: 2px solid #999;
+}
+
+.hero__shop .shop__body {
+  padding-bottom: 0;
+}
+
+.hero__rent {
+  margin-bottom: 0;
+  border-top: 2px solid #111;
+  position: relative;
+}
+
+.hero__rent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #999;
+}
+
+.hero__missions {
+  border-top: 2px solid #111;
+  position: relative;
+}
+
+.hero__missions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #999;
+}
+
+.hero__missions .missions__block:last-child {
+  border-top: none;
+  margin-bottom: 40px;
+}
+
+.hero__missions .missions__block:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.menu-hero__body {
+  padding: 0 10px 20px;
+}
+
+.menu-hero__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.menu-hero__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.menu-hero__item.active .menu-hero__link {
+  font-weight: 700;
+}
+
+.menu-hero__link {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.level-hero__wrapper {
+  max-width: 370px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.level-hero__item {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.level-hero__item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.table-hero {
+  font-size: 0.625rem;
+  color: #fff;
+  border-bottom: 2px solid #111;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 black;
+}
+
+.table-hero::-webkit-scrollbar {
+  width: 100%;
+  height: 1px;
+}
+
+.table-hero::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.table-hero__row:first-child {
+  color: #999;
+  font-weight: 700;
+}
+
+.table-hero__row:first-child .table-hero__item {
+  padding: 0 10px;
+}
+
+.table-hero__row:first-child .table-hero__image {
+  height: unset;
+  border: none;
+}
+
+.table-hero__row:first-child .table-hero__progress {
+  text-align: center;
+}
+
+.table-hero__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 870px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.table-hero__image {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #39BE2D;
+  border-radius: 5px;
+  position: relative;
+}
+
+.table-hero__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.table-hero__skill {
+  width: 75px;
+  text-align: center;
+}
+
+.table-hero__progress {
+  width: 148px;
+}
+
+.table-hero__bar {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+.table-hero__button {
+  width: 122px;
+  display: flex;
+  justify-content: center;
+}
+
+.table-hero__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 28px;
+}
+
+.table-hero__btn svg {
+  width: 21px;
+  height: 13px;
+  fill: #999;
+  margin-left: 7px;
+}
+
+.fight-hero {
+  padding: 20px 0 90px;
+}
+
+.fight-hero__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.625rem;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.fight-hero__rival {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fight-hero__name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.fight-hero__progress {
+  width: 148px;
+  margin-bottom: 20px;
+}
+
+.fight-hero__bar {
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+.fight-hero__value {
+  color: #fff;
+}
+
+.fight-hero__choice {
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.fight-hero__person {
+  width: 118px;
+  height: 245px;
+  position: relative;
+  border: 1px dashed #999999;
+}
+
+.fight-hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fight-hero__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fight-hero__head {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #999999;
+  position: relative;
+  z-index: 1;
+}
+
+.fight-hero__head.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 190, 45, 0.2);
+  pointer-events: none;
+}
+
+.fight-hero__chest {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #999999;
+  position: relative;
+  z-index: 1;
+}
+
+.fight-hero__chest.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 190, 45, 0.2);
+  pointer-events: none;
+}
+
+.fight-hero__legs {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 23px;
+}
+
+.fight-hero__legs.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 190, 45, 0.2);
+  pointer-events: none;
+}
+
+.fight-hero__stomach {
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  border: 1px dashed #999999;
+  position: relative;
+  z-index: 1;
+  padding-top: 16px;
+}
+
+.fight-hero__stomach.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 190, 45, 0.2);
+  pointer-events: none;
+}
+
+.fight-hero__vs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.fight-hero__vs span {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.fight-hero__timer {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #BF0000;
+}
+
+.fight-hero__btn {
+  width: 86px;
+  height: 28px;
+  display: block;
+  margin: 0 auto;
+}
+
+.result-hero {
+  border-bottom: 2px solid #111;
+  padding-bottom: 20px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 black;
+}
+
+.result-hero::-webkit-scrollbar {
+  width: 100%;
+  height: 1px;
+}
+
+.result-hero::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.result-hero__row {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.result-hero__row:first-child .result-hero__item {
+  color: #999;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 10px 10px 20px;
+}
+
+.result-hero__row:first-child .result-hero__win {
+  padding-left: 10px;
+  color: #999;
+}
+
+.result-hero__row:first-child .result-hero__damage {
+  padding-left: 10px;
+}
+
+.result-hero__item {
+  color: #fff;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  max-width: 685px;
+  margin: 0 auto;
+  min-width: 500px;
+}
+
+.result-hero__option {
+  width: 22px;
+}
+
+.result-hero__name {
+  width: 80px;
+  text-align: center;
+}
+
+.result-hero__kicks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.result-hero__kicks img {
+  width: 22px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.result-hero__damage {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.result-hero__damage img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.result-hero__win {
+  color: #BF0000;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 70px;
+}
+
+.result-hero__win img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.result-hero__check {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-hero__check svg {
+  width: 90%;
+  height: 90%;
+  fill: #39BE2D;
+  margin-left: 1px;
+}
+
+.result-hero__delete {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.result-hero__delete svg {
+  width: 50%;
+  height: 50%;
+  fill: #BF0000;
+  margin-left: 1px;
+}
+
+.extra__body {
+  font-size: 0.75rem;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 820px;
+  margin: 20px auto 40px;
+  padding: 0 10px;
+}
+
+.extra__image {
+  width: 154px;
+  height: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+.extra__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.extra__info {
+  flex: 1 1 auto;
+}
+
+.extra__title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.extra__list {
+  margin-bottom: 20px;
+}
+
+.extra__item {
+  line-height: 1.5;
+}
+
+.extra__item span {
+  font-weight: 700;
+}
+
+.extra__activity {
+  margin-bottom: 20px;
+}
+
+.extra__activity span {
+  font-weight: 700;
+}
+
+.extra__valid span {
+  font-weight: 700;
+}
+
+.send-extra {
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  min-width: 235px;
+}
+
+.send-extra__wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.send-extra__info {
+  line-height: 1.5;
+}
+
+.send-extra__info span {
+  font-weight: 700;
+}
+
+.send-extra__image {
+  width: 47px;
+  height: 51px;
+  margin-left: 20px;
+}
+
+.send-extra__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.send-extra__price span {
+  font-weight: 700;
 }
 
 .clan {
@@ -4783,6 +5574,42 @@ body._lock {
   height: 28px;
 }
 
+.casino__body {
+  padding-bottom: 50px;
+}
+
+.casino__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 255px);
+  justify-content: center;
+}
+
+.casino__item {
+  padding: 10px;
+}
+
+.casino__item.active .casino__image {
+  border: 2px solid #111111;
+}
+
+.casino__image {
+  width: 235px;
+  height: 235px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.casino__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .tournament {
   margin-bottom: 86px;
 }
@@ -5332,8 +6159,21 @@ body._lock {
     grid-template-columns: repeat(auto-fill, calc(155px + 15 * (100vw - 320px) / 680));
   }
 
+  .fight-hero__progress {
+    width: calc(135px + 13 * (100vw - 320px) / 680);
+  }
+
   .menu-clan__item:not(:last-child) {
     margin-right: calc(10px + 15 * (100vw - 320px) / 680);
+  }
+
+  .casino__items {
+    grid-template-columns: repeat(auto-fill, calc(160px + 95 * (100vw - 320px) / 680));
+  }
+
+  .casino__image {
+    width: calc(140px + 95 * (100vw - 320px) / 680);
+    height: calc(140px + 95 * (100vw - 320px) / 680);
   }
 
   .footer__link {
@@ -5544,6 +6384,19 @@ body._lock {
     text-align: center;
   }
 
+  .menu-hero__list {
+    justify-content: center;
+  }
+
+  .extra__body {
+    flex-wrap: wrap;
+  }
+
+  .extra__info {
+    flex: unset;
+    margin-bottom: 20px;
+  }
+
   .list-tournament {
     display: flex;
     flex-direction: column;
@@ -5590,6 +6443,27 @@ body._lock {
     width: 100%;
   }
 
+  .extra__body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extra__image {
+    margin: 0 0 20px;
+  }
+
+  .extra__title {
+    text-align: center;
+  }
+
+  .extra__activity {
+    text-align: center;
+  }
+
+  .extra__valid {
+    text-align: center;
+  }
+
   .chat-clan__info {
     flex-direction: column;
     max-width: -moz-fit-content;
@@ -5634,6 +6508,14 @@ body._lock {
   .missions__image {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .level-hero__wrapper {
+    flex-direction: column;
+  }
+
+  .level-hero__item {
+    margin-bottom: 5px;
   }
 
   .money-clan__info {
