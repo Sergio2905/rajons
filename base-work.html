@@ -4,7 +4,7 @@
 <head>
     <title>Rajons</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230406184643">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230407195016">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -103,12 +103,41 @@
                 <div class="location-main__bg">
                     <picture><source srcset="img/kotao001.webp" type="image/webp"><img src="img/kotao001.jpg" alt="Location"></picture>
                 </div>
-                <button type="button" class="location-main__btn">
-                    <span>Kotao: Локация 001</span>
-                    <svg>
-                        <use xlink: href="img/icons/icons.svg#arrow"></use>
-                    </svg>
-                </button>
+                <div class="location-main__select select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao1" name="location">
+                            <label for="for id katao1">Kotao: Локация 001</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao2" name="location">
+                            <label for="for id katao2">Kotao: Локация 002</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao3" name="location">
+                            <label for="for id katao3">Kotao: Локация 003</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao4" name="location">
+                            <label for="for id katao4">Kotao: Локация 004</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao5" name="location">
+                            <label for="for id katao3">Kotao: Локация 005</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao6" name="location">
+                            <label for="for id katao6">Kotao: Локация 006</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="katao7" name="location">
+                            <label for="for id katao7">Kotao: Локация 007</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Kotao: Локация 001
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -254,65 +283,58 @@
                                     <div class="work-base__items">
                                         <div class="work-base__work">
                                             <div class="work-base__images">
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work1.webp" type="image/webp"><img src="img/base/work1.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 кусок
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work1.webp" type="image/webp"><img src="img/base/work1.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 кусок
+                                                        </div>
+                                                    </div>
+                                                    <div class="work-base__hidden hidden-work">
+                                                        <div class="hidden-work__body">
+                                                            <div class="hidden-work__info">
+                                                                Бензиновая карта, используемая для выполнения рабочих
+                                                                задач
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work2.webp" type="image/webp"><img src="img/base/work2.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 LVL
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work2.webp" type="image/webp"><img src="img/base/work2.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 LVL
+                                                        </div>
+                                                    </div>
+                                                    <div class="work-base__hidden hidden-work">
+                                                        <div class="hidden-work__body">
+                                                            <ul class="hidden-work__list">
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/heart.webp" type="image/webp"><img src="img/cards/heart.png" alt="Icon"></picture>
+                                                                    5,000
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/hummer.webp" type="image/webp"><img src="img/cards/hummer.png" alt="Icon"></picture>
+                                                                    2
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/flash-blue.webp" type="image/webp"><img src="img/cards/flash-blue.png" alt="Icon"></picture>
+                                                                    8
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/star.webp" type="image/webp"><img src="img/cards/star.png" alt="Icon"></picture>
+                                                                    3 карты
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work3.webp" type="image/webp"><img src="img/base/work3.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 LVL
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="work-base__desc">
-                                                Небольшое путешествие по территории вашего района
-                                            </div>
-                                        </div>
-                                        <div class="work-base__reward">
-                                            <div class="work-base__image">
-                                                <picture><source srcset="img/base/reward.webp" type="image/webp"><img src="img/base/reward.jpg" alt="Image"></picture>
-                                                <div class="work-base__level">
-                                                    10 LVL
-                                                </div>
-                                            </div>
-                                            <div class="work-base__or">
-                                                или <picture><source srcset="img/cards/bank.webp" type="image/webp"><img src="img/cards/bank.png" alt="Icon"></picture> <span>500</span>
-                                            </div>
-                                        </div>
-                                        <div class="work-base__start">
-                                            <button type="button" class="work-base__btn btn">Начать</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-base__row">
-                                    <div class="work-base__items">
-                                        <div class="work-base__work">
-                                            <div class="work-base__images">
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work1.webp" type="image/webp"><img src="img/base/work1.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 кусок
-                                                    </div>
-                                                </div>
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work2.webp" type="image/webp"><img src="img/base/work2.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 LVL
-                                                    </div>
-                                                </div>
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work3.webp" type="image/webp"><img src="img/base/work3.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 LVL
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work3.webp" type="image/webp"><img src="img/base/work3.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 LVL
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,22 +362,137 @@
                                     <div class="work-base__items">
                                         <div class="work-base__work">
                                             <div class="work-base__images">
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work1.webp" type="image/webp"><img src="img/base/work1.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 кусок
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work1.webp" type="image/webp"><img src="img/base/work1.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 кусок
+                                                        </div>
+                                                    </div>
+                                                    <div class="work-base__hidden hidden-work">
+                                                        <div class="hidden-work__body">
+                                                            <div class="hidden-work__info">
+                                                                Бензиновая карта, используемая для выполнения рабочих
+                                                                задач
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work2.webp" type="image/webp"><img src="img/base/work2.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 LVL
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work2.webp" type="image/webp"><img src="img/base/work2.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 LVL
+                                                        </div>
+                                                    </div>
+                                                    <div class="work-base__hidden hidden-work">
+                                                        <div class="hidden-work__body">
+                                                            <ul class="hidden-work__list">
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/heart.webp" type="image/webp"><img src="img/cards/heart.png" alt="Icon"></picture>
+                                                                    5,000
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/hummer.webp" type="image/webp"><img src="img/cards/hummer.png" alt="Icon"></picture>
+                                                                    2
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/flash-blue.webp" type="image/webp"><img src="img/cards/flash-blue.png" alt="Icon"></picture>
+                                                                    8
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/star.webp" type="image/webp"><img src="img/cards/star.png" alt="Icon"></picture>
+                                                                    3 карты
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="work-base__image">
-                                                    <picture><source srcset="img/base/work3.webp" type="image/webp"><img src="img/base/work3.jpg" alt="Image"></picture>
-                                                    <div class="work-base__level">
-                                                        1 LVL
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work3.webp" type="image/webp"><img src="img/base/work3.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 LVL
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="work-base__desc">
+                                                Небольшое путешествие по территории вашего района
+                                            </div>
+                                        </div>
+                                        <div class="work-base__reward">
+                                            <div class="work-base__image">
+                                                <picture><source srcset="img/base/reward.webp" type="image/webp"><img src="img/base/reward.jpg" alt="Image"></picture>
+                                                <div class="work-base__level">
+                                                    10 LVL
+                                                </div>
+                                            </div>
+                                            <div class="work-base__or">
+                                                или <picture><source srcset="img/cards/bank.webp" type="image/webp"><img src="img/cards/bank.png" alt="Icon"></picture> <span>500</span>
+                                            </div>
+                                        </div>
+                                        <div class="work-base__start">
+                                            <button type="button" class="work-base__btn btn">Начать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-base__row">
+                                    <div class="work-base__items">
+                                        <div class="work-base__work">
+                                            <div class="work-base__images">
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work1.webp" type="image/webp"><img src="img/base/work1.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 кусок
+                                                        </div>
+                                                    </div>
+                                                    <div class="work-base__hidden hidden-work">
+                                                        <div class="hidden-work__body">
+                                                            <div class="hidden-work__info">
+                                                                Бензиновая карта, используемая для выполнения рабочих
+                                                                задач
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work2.webp" type="image/webp"><img src="img/base/work2.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 LVL
+                                                        </div>
+                                                    </div>
+                                                    <div class="work-base__hidden hidden-work">
+                                                        <div class="hidden-work__body">
+                                                            <ul class="hidden-work__list">
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/heart.webp" type="image/webp"><img src="img/cards/heart.png" alt="Icon"></picture>
+                                                                    5,000
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/hummer.webp" type="image/webp"><img src="img/cards/hummer.png" alt="Icon"></picture>
+                                                                    2
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/flash-blue.webp" type="image/webp"><img src="img/cards/flash-blue.png" alt="Icon"></picture>
+                                                                    8
+                                                                </li>
+                                                                <li class="hidden-work__item">
+                                                                    <picture><source srcset="img/cards/star.webp" type="image/webp"><img src="img/cards/star.png" alt="Icon"></picture>
+                                                                    3 карты
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="work-base__card">
+                                                    <div class="work-base__image">
+                                                        <picture><source srcset="img/base/work3.webp" type="image/webp"><img src="img/base/work3.jpg" alt="Image"></picture>
+                                                        <div class="work-base__level">
+                                                            1 LVL
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -405,7 +542,7 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20230406184643"></script>
+    <script src="js/app.min.js?_v=20230407195016"></script>
 </body>
 
 </html>
