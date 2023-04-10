@@ -7691,6 +7691,8 @@ body._lock {
 
 .bank__value {
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .bank__value img {
